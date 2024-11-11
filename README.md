@@ -1,16 +1,7 @@
-# project_test
+11.11.24
 
-A new Flutter project.
+Доработан дизайн приложения (ещё не все элементы идентичны шаблону)
 
-## Getting Started
+Подключена supabase
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Окно регистрации нового пользователя при вводе данных теперь отправляет их в supabase и сохраняет в БД.
