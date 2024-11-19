@@ -1,10 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:project_test/regScreen/popUp.dart';
-import 'package:project_test/regScreen/regScreen.dart';
-import 'package:project_test/regScreen/signIn.dart';
-import 'package:project_test/regScreen/verif.dart';
+import 'package:project_test/screen/homePageScreen/home.dart';
+import 'package:project_test/screen/regScreen/popUp.dart';
+import 'package:project_test/screen/regScreen/regScreen.dart';
+import 'package:project_test/screen/regScreen/signIn.dart';
+import 'package:project_test/screen/regScreen/verif.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 
@@ -20,10 +21,11 @@ void main() async {
     initialRoute: '/',
     routes:
     {
-      '/': (context) => const sign_in(),
+      '/': (context) => sign_in(),
       '/reg': (context) => reg_screen(),
       '/pop': (context) => const pop_screen(),
-      '/verif': (context) => const verification_screen()
+      '/verif': (context) => const verification_screen(),
+      '/home': (context) => const home()
     },
   ));
 }

@@ -36,8 +36,9 @@ class _sign_in extends State<sign_in> {
           child: Column(
             children: [
               Padding(padding: const EdgeInsets.only(right: 350, top: 40),
-                child: IconButton(onPressed: () {
-
+                child: IconButton(onPressed: ()
+                {
+                  Navigator.pushReplacementNamed(context, '/home');
                 },
                     icon: Image.asset('assets/back.png')),
               ),
