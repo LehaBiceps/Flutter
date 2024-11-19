@@ -8,30 +8,20 @@ class reg_screen extends StatefulWidget {
 
 class _reg_screen extends State<reg_screen> {
   final SupabaseClient supabase = Supabase.instance.client;
+
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passController = TextEditingController();
-  String? message;
 
   Future<void> addUser() async {
-    try {
-      await supabase.from('user').insert({
-        'user_name': _nameController.text,
-        'user_email': _emailController.text,
-        'user_pass': _passController.text,
-      });
-
-      setState(() {
-        message = 'User added successfully!';
-        _nameController.clear();
-        _emailController.clear();
-        _passController.clear();
-      });
-    } catch (error) {
-      setState(() {
-        message = 'Error: $error';
-      });
-    }
+    final email = _emailController.text;
+    final password = _passController.text;
+    final name = _nameController.text;
+    await supabase.auth.signUp(
+      data: {'username': name},
+      email: email,
+      password: password,
+    );
   }
 
   @override
