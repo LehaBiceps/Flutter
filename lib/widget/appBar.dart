@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget appBar()
+Widget appBar(context)
 {
   return Stack(
     children: [
@@ -21,7 +21,7 @@ Widget appBar()
         left: 90,
         child: IconButton(onPressed: ()
         {
-
+          Navigator.pushReplacementNamed(context, '/like');
         },
             icon: Image.asset('assets/heart.png')),
       ),
@@ -48,7 +48,7 @@ Widget appBar()
         left: 145,
         child: IconButton(onPressed: ()
         {
-
+          Navigator.pushReplacementNamed(context, '/cart');
         },
             icon: Image.asset('assets/imgggg.png')),
       )

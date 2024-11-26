@@ -107,7 +107,7 @@ class _homeState extends State<home> {
                 Padding(padding: const EdgeInsets.only(left: 25),
                   child: ElevatedButton(onPressed: ()
                   {
-
+                    Navigator.pushReplacementNamed(context, '/outdoor');
                   },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
@@ -160,7 +160,7 @@ class _homeState extends State<home> {
                   InkWell(
                     onTap: ()
                     {
-                      Navigator.pushReplacementNamed(context, '/');
+                      Navigator.pushReplacementNamed(context, '/stark');
                     },
                     child: const Text("Все",
                       style: TextStyle(
@@ -204,7 +204,7 @@ class _homeState extends State<home> {
                   InkWell(
                     onTap: ()
                     {
-                      Navigator.pushReplacementNamed(context, '/');
+
                     },
                     child: const Text("Все",
                       style: TextStyle(
@@ -220,9 +220,9 @@ class _homeState extends State<home> {
           Padding(padding: const EdgeInsets.only(top: 20),
             child: Image.asset('assets/img.png'),
           ),
-          appBar(),
         ],
       ),
+      bottomNavigationBar: appBar(context),
     );
   }
 }

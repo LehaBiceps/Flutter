@@ -1,13 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:project_test/screen/homePageScreen/cart.dart';
 import 'package:project_test/screen/homePageScreen/home.dart';
+import 'package:project_test/screen/homePageScreen/like.dart';
+import 'package:project_test/screen/homePageScreen/outdoor.dart';
+import 'package:project_test/screen/homePageScreen/stark.dart';
 import 'package:project_test/screen/regScreen/popUp.dart';
 import 'package:project_test/screen/regScreen/regScreen.dart';
 import 'package:project_test/screen/regScreen/signIn.dart';
 import 'package:project_test/screen/regScreen/verif.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-//123
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,7 +29,11 @@ void main() async {
       '/reg': (context) => reg_screen(),
       '/pop': (context) => const pop_screen(),
       '/verif': (context) => const verification_screen(),
-      '/home': (context) => const home()
+      '/home': (context) => const home(),
+      '/like': (context) => const like_screen(),
+      '/stark': (context) => const stark(),
+      '/outdoor': (context) => const outdoor(),
+      '/cart': (context) => cart()
     },
   ));
 }
